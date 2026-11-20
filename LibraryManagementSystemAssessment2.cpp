@@ -22,7 +22,7 @@ int main() {
 		"9780316007443", true, "2025-04-19");
 	books[4].setBookDetails(
 		"Divergent", "Veronica Roth",
-		"9780062024039", true, "2025-12-04");
+		"9780062024039", true, "2025-12-24");
 	
 
 	Book::sortBookData(books, 5);
@@ -32,7 +32,7 @@ int main() {
 	bool found;
 
 	cout << "================================" << endl;
-	cout << "Welcome to the Library Management System" << endl;
+	cout << " AIT Library Management System" << endl;
 	cout << "================================" << endl;
 
 	do {
