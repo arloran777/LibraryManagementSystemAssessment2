@@ -18,11 +18,11 @@ int main() {
 		"The Maze Ruuner", "James Dashner",
 		"9780385737951", false, "2025-08-31");
 	books[3].setBookDetails(
-		"Twilight", "Stephenie Meyer",
-		"9780316007443", true, "2025-04-19");
+		"A Game of Thrones", "George R. R. Martin",
+		"9780553593716", true, "2025-04-19");
 	books[4].setBookDetails(
-		"Divergent", "Veronica Roth",
-		"9780062024039", true, "2025-12-24");
+		"The Name of Wind", "Patrick Rothfuss",
+		"9780756404079", true, "2025-12-24");
 	
 
 	Book::sortBookData(books, 5);
