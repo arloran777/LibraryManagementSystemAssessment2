@@ -85,7 +85,7 @@ void Book::returnBook() {
     }
 }
 
-// Sort books by ISBN using Bubble Sort
+// Sort books by ISBN using Bubble Sort method
 void Book::sortBookData(Book books[], int size) {
     for (int i = 0; i < size - 1; i++) {
         for (int j = 0; j < size - i - 1; j++) {
