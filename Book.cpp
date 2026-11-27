@@ -1,6 +1,7 @@
 #include "Book.h"
 #include <iostream>
 #include <algorithm>
+#include <cctype>
 
 using namespace std;
 
@@ -13,10 +14,38 @@ Book::Book() {
     dateAdd = "";
 }
 
-// Assign book details
+// Assign and validate book details
 void Book::setBookDetails(string bookTitle, string bookAuthor,
     string bookISBN, bool available,
     string bookDateAdd) {
+
+    // Validate title and author
+    if (bookTitle.empty() || bookAuthor.empty()) {
+        cout << "Error: Title or author cannot be empty." << endl;
+        return;
+    }
+
+    // Validate ISBN length
+    if (bookISBN.length() != 13) {
+        cout << "Error: ISBN must contain 13 digits." << endl;
+        return;
+    }
+
+    // Validate ISBN characters
+    for (char digit : bookISBN) {
+        if (!isdigit(static_cast<unsigned char>(digit))) {
+            cout << "Error: ISBN must contain only numbers." << endl;
+            return;
+        }
+    }
+
+    // Validate date
+    if (bookDateAdd.empty()) {
+        cout << "Error: Date cannot be empty." << endl;
+        return;
+    }
+
+    // Assign valid book details
     title = bookTitle;
     author = bookAuthor;
     isbn = bookISBN;
